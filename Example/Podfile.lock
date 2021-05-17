@@ -1,0 +1,16 @@
+PODS:
+  - ShortURL (0.1.0)
+
+DEPENDENCIES:
+  - ShortURL (from `../`)
+
+EXTERNAL SOURCES:
+  ShortURL:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ShortURL: 58323c26033c2ddfea96cc53b00ae83c207941fe
+
+PODFILE CHECKSUM: 8bc17f9d742455677e3c8df6b00154ffcba3b7cc
+
+COCOAPODS: 1.10.1

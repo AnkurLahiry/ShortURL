@@ -1,0 +1,6 @@
+framework module Pods_ShortURL_Example {
+  umbrella header "Pods-ShortURL_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

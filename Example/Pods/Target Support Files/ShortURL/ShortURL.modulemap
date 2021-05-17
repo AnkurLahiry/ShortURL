@@ -1,0 +1,6 @@
+framework module ShortURL {
+  umbrella header "ShortURL-umbrella.h"
+
+  export *
+  module * { export * }
+}
