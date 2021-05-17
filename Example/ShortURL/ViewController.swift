@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import ShortURL
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let shorterURL = ShortURLService()
+        shorterURL.delegate = self
     }
-
 }
 
+extension ViewController: ShortURLServiceDelegate {
+    func didGenerate(short url: String, for longURL: String) {
+        print("Success")
+        print("\(url)")
+        print("\(longURL)")
+    }
+    
+    func didFailGenerate(for longURL: String, error: Error?) {
+        print("Failed")
+        print(longURL)
+        print("\(String(describing: error))")
+    }
+}
